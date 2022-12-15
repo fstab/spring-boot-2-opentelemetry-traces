@@ -18,6 +18,9 @@ This should create the file `./target/demo-0.0.1-SNAPSHOT.jar`
 OTEL_TRACES_EXPORTER=none java -javaagent:opentelemetry-javaagent.jar -jar target/demo-0.0.1-SNAPSHOT.jar
 ```
 
+The environment variable `OTEL_TRACES_EXPORTER=none` means that the OpenTelemetry Java agent should not send
+traces to a monitoring backend. That way we can quickly test if Exemplars work without configuring a monitoring backend.
+
 ## Test Call
 
 ```
