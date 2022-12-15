@@ -5,8 +5,12 @@ Simple Demo project to show how to get Prometheus Exemplars in a Spring Boot 2 a
 ## Build
 
 ```
+git clone https://github.com/fstab/spring-boot-2-opentelemetry-traces.git
+cd spring-boot-2-opentelemetry-traces/
 ./mvnw package
 ```
+
+This should create the file `./target/demo-0.0.1-SNAPSHOT.jar`
 
 ## Run
 
@@ -16,7 +20,11 @@ OTEL_TRACES_EXPORTER=none java -javaagent:opentelemetry-javaagent.jar -jar targe
 
 ## Test Call
 
-[http://localhost:8080](http://localhost:8080) should return "Hello, world!".
+```
+curl http://localhost:8080
+```
+
+This should return "Hello, world!".
 
 ## View Exemplars
 
